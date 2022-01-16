@@ -17,7 +17,7 @@ def list_buttons(update, context):
         return sendMessage('Send a search key along with command', context.bot, update)
     buttons = button_build.ButtonMaker()
 
-    buttons.sbutton("Recursive", f"types {user_id} recu")
+    buttons.sbutton("Search", f"types {user_id} recu")
     buttons.sbutton("Cancel", f"types {user_id} cancel")
     button = InlineKeyboardMarkup(buttons.build_menu(2))
     sendMarkup('Choose option to list.', context.bot, update, button)
